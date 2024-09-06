@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [click here]()
-- Live Site URL: [click here]()
+- Solution URL: [click here](https://github.com/elasri21/Single_page_developer_portfolio)
+- Live Site URL: [click here](https://elasri21.github.io/Single_page_developer_portfolio/)
 
 ### Built with
 
