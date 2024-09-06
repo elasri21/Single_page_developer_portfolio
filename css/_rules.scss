@@ -1,0 +1,492 @@
+nav {
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $main-bg;
+    min-height: 66px;
+    z-index: 111;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        .logo {
+            a {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: $text-c;
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            li {
+                a {
+                    display: block;
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../images/pattern-rings.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    // background-size: 50% auto;
+    @media (min-width: 1024px) {
+        height: 100vh;
+        .container {
+            p {
+                max-width: 55% !important;
+            }
+            .image {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 60%;
+                bottom: 0;
+                img {
+                    width: 100%;
+                    max-height: 100%;
+                    &.desktop-image {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        height: 100vh;
+        .container {
+            h1, p {
+                position: relative;
+            }
+            p {
+                max-width: 70%;
+            }
+            .image {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 50%;
+                bottom: 0;
+                img {
+                    width: 100%;
+                    max-height: 100%;
+                    &.tablet-image {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+    }
+    @media (max-width: 767px) {
+        .container {
+            h1, p {
+                text-align: center;
+            }
+            & > a {
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+            }
+            .image {
+                max-width: 100%;
+                width: fit-content;
+                margin: 0 auto 30px;
+                img {
+                    max-width: 100%;
+                    &.mobile-image {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+    }
+    .container {
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: $text-c;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            a {
+                position: relative;
+                color: $text-c;
+                &:hover {
+                    color: $u-line-c;
+                }
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background-color: $u-line-c;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                }
+            }
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: $text-c;
+            line-height: 1.3rem;
+            margin-bottom: 30px;
+        }
+        & > a {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $text-c;
+            text-transform: uppercase;
+            position: relative;
+            &:hover {
+                color: $u-line-c;
+            }
+            &::before {
+                content: "";
+                width: 100%;
+                height: 2px;
+                background-color: $u-line-c;
+                position: absolute;
+                left: 0;
+                top: 100%;
+            }
+        }
+        .image {
+            img {
+                &.desktop-image {
+                    display: none;
+                }
+                &.tablet-image {
+                    display: none;
+                }
+                &.mobile-image {
+                    display: none;
+                }
+                // width: 100%;
+                // height: 100%;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 50px;
+    .skills {
+        padding: 50px 0;
+        background-image: url("../images/pattern-rings.svg");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 50% auto;
+        .container {
+            padding-top: 50px;
+            border-top: 1px solid $text-c;
+            @media (min-width: 1024px) {
+                .skill {
+                    width: calc(33.33% - 20px) !important;
+                }
+            }
+            @media (min-width: 624px) and (max-width: 1023px) {
+                .skill {
+                    width: calc(50% - 15px) !important;
+                }
+            }
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px 30px;
+            .skill {
+                width: 100%;
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: $text-c;
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                    &.upper {
+                        text-transform: uppercase;
+                    }
+                }
+                p{
+                    font-size: .8rem;
+                    font-weight: 300;
+                    color: $text-c
+                }
+            }
+        }
+    }
+
+    .projects {
+        padding: 50px 0;
+        .container {
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-bottom: 40px;
+                h2 {
+                    font-size: 2.2rem;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    color: $text-c;
+                }
+                a {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: $text-c;
+                    text-transform: uppercase;
+                    position: relative;
+                    &:hover {
+                        color: $u-line-c;
+                    }
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background-color: $u-line-c;
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                    }
+                }
+            }
+            .all-projects {
+                @media (min-width: 1024px) {
+                    .project {
+                        width: calc(33.33% - 20px) !important;
+                        .image {
+                            .small {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                @media (min-width: 624px) and (max-width: 1023px) {
+                    .project {
+                        width: calc(50% - 15px) !important;
+                        .image {
+                            .small {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 623px) {
+                    .project {
+                        .image {
+                            .large {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px 30px;
+                .project {
+                    width: 100%;
+                    .image {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    h3 {
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        color: $text-c;
+                        text-transform: uppercase;
+                        margin: 20px 0 8px 0;
+                    }
+                    .tools {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        margin-bottom: 10px;
+                        span {
+                            font-size: 1rem;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            color: $text-c;
+                        }
+                    }
+                    .links {
+                        display: flex;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                        a {
+                            font-size: 1rem;
+                            font-weight: 400;
+                            color: $text-c;
+                            text-transform: uppercase;
+                            position: relative;
+                            &:hover {
+                                color: $u-line-c;
+                            }
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                height: 2px;
+                                background-color: $u-line-c;
+                                position: absolute;
+                                left: 0;
+                                top: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        padding: 50px 0;
+        background-image: url("../images/pattern-rings.svg");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 50% auto;
+        .container {
+            @media (min-width: 922px) {
+                .description {
+                    width: calc(50% - 20px) !important;
+                    text-align: left !important;
+                }
+                form {
+                    width: calc(50% - 20px) !important;
+                }
+            }
+            display: flex;
+            align-items: center;
+            gap: 30px 40px;
+            flex-wrap: wrap;
+            .description {
+                width: 100%;
+                text-align: center;
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: $text-c;
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: .9rem;
+                    font-weight: 300;
+                    color: $text-c;
+                    line-height: 1.3rem;
+                }
+            }
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .form-control {
+                    width: 100%;
+                    input, textarea {
+                        margin-bottom: 5px;
+                        display: block;
+                        width: 100%;
+                        padding: 15px 20px;
+                        border-bottom: 1px solid gray;
+                        font-size: 1rem;
+                        color: $text-c;
+                        caret-color: $text-c;
+                        &::placeholder {
+                            color: gray;
+                            text-transform: uppercase;
+                            transition: opacity .3s linear;
+                        }
+                        &:focus {
+                            &::placeholder {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    textarea {
+                        height: 120px;
+                        resize: none;
+                    }
+                    p {
+                        font-size: .7rem;
+                        font-weight: 300;
+                        color: red;
+                    }
+                }
+                .submit {
+                    display: block;
+                    width: fit-content;
+                    margin-left: auto;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: $text-c;
+                    text-transform: uppercase;
+                    position: relative;
+                    cursor: pointer;
+                    &:hover {
+                        color: $u-line-c;
+                    }
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background-color: $u-line-c;
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 50px 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 30px;
+        border-top: 1px solid gray;
+        .logo {
+            a {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: $text-c;
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            li {
+                a {
+                    display: block;
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

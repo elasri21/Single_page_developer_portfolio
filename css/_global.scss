@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $family;
+    background-color: $main-bg;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s linear;
+}
+
+input, textarea, button {
+    background: none;
+    outline: none;
+    border: none;
+    transition: .3s linear;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    @media (min-width: 1200px) {
+        margin: 0 100px !important;
+    }
+    @media (min-width: 922px) and (max-width: 1199px) {
+        margin: 0 70px !important;
+    }
+    @media (min-width: 768px) and (max-width: 921px) {
+        margin: 0 50px !important;
+    }
+    margin: 0 30px;
+}
+
+.c-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
